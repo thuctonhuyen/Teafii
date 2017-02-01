@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Thuc Huyen">
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Montserrat|Pacifico" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/style1.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <title>Thuc Huyen's portfolio</title>
+</head>
+
+<body>
+    <header>
+        <div class="animated bounce" id="firstHead">Welcome to my journey</div>
+        <div id="intro">
+            <img src="img/profilePic.png" alt="Thuc Huyen's picture'" />
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a data-page-id="#p1"> <i class="fa fa-user"> </i>&nbsp About Me</a>
+            </li>
+
+            <li>
+                <a data-page-id="#p2"> <i class="fa fa-desktop"> </i>&nbsp My Projects</a>
+            </li>
+
+            <li>
+                <a data-page-id="#p3"> <i class="fa fa-graduation-cap"> </i>&nbsp My Education</a>
+            </li>
+
+            <li>
+                <a href="file/Resume.pdf" download="Resume.pdf"> <i class="fa fa-download" aria-hidden="true"></i>&nbsp My Resume</a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <section>
+        <div class="page" id="p1">
+            <div class="row">
+                <h1>Quick introduction</h1>
+                <p>
+                    I am really interested in web development. I am confident on both front-end and back-end. I am also interested in web design.
+                </p>
+                <img src="img/webDev.png" />
+            </div>
+            <div class="row">
+                <h1>Expertise</h1>
+                <p>
+
+                    I have strong knowledge toward MVC framework, especially ASP.NET MVC, and Entity Framework.
+                </p>
+                <img src="img/MVC.png" />
+            </div>
+            <div class="row">
+                <h1>Career Goal</h1>
+                <p>
+                    When I graduate on June 2017, I am looking for a full-time job as a web developer to develop simple business solution.
+                </p>
+                <img src="img/careerPath.png" />
+            </div>
+        </div>
+
+        <div class="page" id="p2">
+            <div class="column-left">
+                <h1>KoalaTea Project - Spring 2015</h1>
+                <ul>
+                    <li>Restaurant POS Application </li>
+                    <li>Use agile method to develop and design the application </li>
+                    <li>Use Microsoft Visual Studio, C#, and ADO.NET </li>
+                    <li class="demo" data-page-id="#demo1"> Some demos:</li>
+
+                    <div class="hiddenDemo" id="demo1">
+                        <div><img src="img/koalatea/addeditItems.jpg" /></div>
+                        <div><img src="img/koalatea/addEditPromotion.jpg" /></div>
+                        <div><img src="img/koalatea/editDeleteItems.jpg" /></div>
+                        <div><img src="img/koalatea/OrderPage.jpg" /></div>
+                    </div>
+
+                </ul>
+            </div>
+            <div class="column-right">
+                <h1>Teafii Project - Spring 2016 </h1>
+                <ul>
+                    <li>Ecommerce website</li>
+                    <li>Use ASP.NET MVC 4.5, Entity Framework, Bootstrap, Team Foundation Service (TFS) </li>
+                    <li>Use Jquery/AJAX, RESTful/API </li>
+                    <li class="demo" data-page-id="#demo2">Some demos:</li>
+
+                    <div class="hiddenDemo" id="demo2">
+                        <div><img src="img/teaffi/adminPage.jpg" /></div>
+                        <div><img src="img/teaffi/homepage.jpg" /></div>
+                        <div><img src="img/teaffi/productPage.jpg" /></div>
+                    </div>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="page" id="p3">
+            <div class="column-left">
+                <h1>University of California, Irvine, CA</h1>
+                <ul>
+                    <li>Major: Computer Science</li>
+                    <li>Specialization: Information </li>
+                    <li>GPA: 3.92 </li>
+                    <li>President's list</li>
+                </ul>
+                <img src="img/icsBuilding.jpg" alt="ics building" />
+            </div>
+            <div class="column-right">
+                <h1>Orange Coast College, Costa Mes, CA</h1>
+                <ul>
+                    <li>Major: Computer Science</li>
+                    <li>GPA: 4.00 </li>
+                    <li>Dean's list</li>
+                </ul>
+                <img src="img/mbccBuilding.jpg" alt="mbcc building" />
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div id="myContact">
+            <h2>My Contact</h2>
+            <a class="fa fa-linkedin-square" aria-hidden="true" href="https://www.linkedin.com/in/thuc-huyen-b37a6010a">
+            </a>
+            <a class="fa fa-google-plus-official" aria-hidden="true" href="https://plus.google.com/118436214735119800541">
+            </a>
+            <div/>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            $('nav a').click(function() {
+                $(".page").hide();
+                $("nav a").removeClass('active');
+                var id = ($(this).attr("data-page-id"));
+                $(this).addClass('active')
+                $(id).fadeIn();
+            });
+
+            $('.demo').click(function() {
+                var id = $(this).attr("data-page-id");
+                //$(id).toggle('show');
+
+                if ($(id).css('width') === '0px')
+                    $(id).css({
+                        'width': '100%',
+                        'height': '100%'
+                    });
+                else
+                    $(id).css({
+                        'width': '0',
+                        'height': '0'
+                    });
+
+            });
+
+        });
+    </script>
+
+
+</body>
+
+</html>

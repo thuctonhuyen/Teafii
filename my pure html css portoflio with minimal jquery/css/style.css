@@ -1,0 +1,106 @@
+ html,
+ body {
+     width: 100%;
+     height: 100%;
+     color: white;
+     background-image: url(../img/quickIntro.png);
+     background-size: 100% 100%;
+     font-family: "Montserrat", "Arial";
+ }
+ 
+ * {
+     -webkit-transition: all 250ms ease-out;
+     -moz-transition: all 250ms ease-out;
+     -o-transition: all 250ms ease-out;
+     -ms-transition: all 250ms ease-out;
+     transition: all 250ms ease-out;
+ }
+ 
+ header {
+     width: 100%;
+     position: absolute;
+     top: 32%;
+     text-align: center;
+     text-shadow: 1px 1px 1px black
+ }
+ 
+ header p {
+     margin: 25px;
+ }
+ 
+ header p span {
+     color: #dfd05d;
+ }
+ 
+ nav {
+     width: 100%;
+     text-align: center;
+ }
+ 
+ nav a {
+     color: white;
+     text-decoration: none;
+     padding: 5px;
+     background-color: rgb(60, 60, 60);
+     background-color: rgba(255, 255, 255, 0.3);
+ }
+ 
+ nav a:hover {
+     color: black;
+     transform: scale(1.2);
+ }
+ 
+ footer {
+     width: 100%;
+     position: fixed;
+     bottom: 0;
+     text-align: center;
+ }
+ 
+ footer a {
+     color: white;
+     padding: 17px 5px;
+ }
+ 
+ footer a:hover {
+     -webkit-transform: scale(1.2);
+     -moz-transform: scale(1.2);
+     -o-transform: scale(1.2);
+     -ms-transform: scale(1.2);
+     transform: scale(1.2);
+ }
+ 
+ footer .fa {
+     padding: 8px;
+ }
+ 
+ @media only screen and (min-width: 320px) {
+     header p {
+         font-size: 25px;
+     }
+     header p+p {
+         font-size: 15px;
+     }
+     header a {
+         font-size: 20px;
+     }
+     footer .fa {
+         font-size: 20px;
+         padding-top: 20px;
+     }
+ }
+ 
+ @media only screen and (min-width: 768px) {
+     header p {
+         font-size: 50px;
+     }
+     header p+p {
+         font-size: 35px;
+     }
+     header a {
+         font-size: 30px;
+     }
+     footer .fa {
+         font-size: 30px;
+     }
+ }

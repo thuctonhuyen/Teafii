@@ -1,0 +1,41 @@
+﻿<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            @Html.ActionLink("Portfolio", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a type="button" class="btn btn-link text-center" href="#">
+                        <span class="glyphicon glyphicon-user"></span> <br />About me
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a type="button" class="btn btn-link text-center" href="@Url.Action("DownloadResume", "Home")">
+                        <span class="glyphicon glyphicon-list-alt"></span> <br />My Resume
+                    </a>
+                </li>
+                <li>
+                    <a type="button" class="btn btn-link text-center" href="#section2">
+                        <span class="glyphicon glyphicon-briefcase"></span> <br />My Work
+                    </a>
+                </li>
+
+                <li>
+                    <a type="button" class="btn btn-link text-center" href="#section3">
+                        <span class="glyphicon glyphicon-envelope"></span> <br />My Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>

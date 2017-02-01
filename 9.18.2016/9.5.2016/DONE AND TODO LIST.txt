@@ -1,0 +1,41 @@
+
+DONE:
+CHANGE ADMIN MODE
+method: drop down only for anonymous/guests not for admin
+
+TO DO;
+-transaction cart. 
+-make code cleaner/
+-add custom error
+-------------------------------------------------
+original script to display products
+<table id="products" class="table table-hover">
+    <thead>
+    <tr>
+        <th> Product </th>
+        <th> Category</th>
+        <th> Image </th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td>
+                @product.Name
+            </td>
+
+            <td>
+                @product.Category.Name
+            </td>
+
+            <td>
+                @if (product.Image != null)
+                {
+                    <img class="img-rounded img-responsive img-thumbnail" src="@Url.Content(product.Image)" width='150px' height='auto'/>
+                }
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

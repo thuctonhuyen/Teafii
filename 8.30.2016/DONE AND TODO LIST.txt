@@ -1,0 +1,5 @@
+-registration for admin and guests DONE
+-split the view for admin and guests DONE
+-display products image DONE
+TO-DO:
+-display products like in ecommerce website 

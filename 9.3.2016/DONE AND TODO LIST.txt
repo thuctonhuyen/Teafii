@@ -1,0 +1,42 @@
+
+-display products like in ecommerce website - DONe
+however, desirable => client way using jquery/ajax
+
+TO DO;
+-change admin mode 
+products => tea => show up all tea , when add new product => dont have to select category
+OR the collapse doesnt show up in admin
+we'll see...
+
+-------------------------------------------------
+original script to display products
+<table id="products" class="table table-hover">
+    <thead>
+    <tr>
+        <th> Product </th>
+        <th> Category</th>
+        <th> Image </th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var product in Model)
+    {
+        <tr>
+            <td>
+                @product.Name
+            </td>
+
+            <td>
+                @product.Category.Name
+            </td>
+
+            <td>
+                @if (product.Image != null)
+                {
+                    <img class="img-rounded img-responsive img-thumbnail" src="@Url.Content(product.Image)" width='150px' height='auto'/>
+                }
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
